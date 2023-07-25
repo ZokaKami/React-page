@@ -3,6 +3,7 @@ import Header from "../components/pageHeader";
 import LetsBuild from "../components/headerTitle";
 import MainAnimation from "../components/mainAnimation";
 import PageBody from "../components/pageBody";
+import Footer from "../components/footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <LetsBuild />
       <MainAnimation />
       <PageBody />
+      <Footer />
     </div>
   );
 }

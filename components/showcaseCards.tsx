@@ -1,6 +1,6 @@
 function showcaseCards() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-8">
       <div className="h-full px-12  mx-auto bg-red-950 text-white text-[1em] rounded-3xl ">
         <h1 className="text-[1.4em] font-bold py-12">Me and Jungle</h1>
         <p className="max-w-[420px] sm:max-w-[500px] mx-auto">
