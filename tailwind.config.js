@@ -6,7 +6,14 @@ export default {
     ".//components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: { 'xsm': '480px',
+    keyframes: {
+      circle: {
+        '0%': { transform: 'translateY(-32px)' },
+        '100%': { transform: 'translateY(32px)' },
+      }
+    }
+  },
   },
   plugins: [],
 }
