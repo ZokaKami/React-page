@@ -46,10 +46,10 @@ function RenderingEmp() {
 function aboutUs() {
   return (
     <div className="h-full p-8 space-y-8 w-full  rounded-t-[60px]  bg-pink-200    relative  ">
-      <h1 className="text-[1.6em] py-4 font-bold w-[200px] sm:w-full mx-auto">
+      <h1 className="text-[1.6em] py-4 font-bold w-[200px] sm:w-full mx-auto ">
         A little bit about us
       </h1>
-      <p className="  ">
+      <p className="text-left  ">
         Vinicius, the lead web designer and developer of Cinza, has been working
         at Razorfrog Web Design since 2016, and has almost a decade of
         experience in the field. He decided to create Cinza in 2020, when he

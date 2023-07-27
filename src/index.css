@@ -9,6 +9,13 @@
   background-size: 180% 180%;
   animation: gradient-animation 6s ease infinite;
 }
+.gradients {
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(334deg, #180113, #360d1e ,#caa3b3);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
 
 @keyframes gradient-animation {
   0% {
@@ -20,4 +27,39 @@
   100% {
     background-position: 0% 50%;
   }
+}
+.mouse {
+	width: 50px;
+	height: 90px;
+	border: 3px solid #333;
+	border-radius: 60px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #333;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
 }

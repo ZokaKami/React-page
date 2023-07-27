@@ -1,7 +1,10 @@
 import { useState } from "react";
-import telegram from "./images/telegram.png";
+
 import hamburgerWhite from "./images/hamburgerWhite.png";
 import hamburgerBlack from "./images/hamburgerBlack.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
+import { faTelegram, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Dropdown() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,16 +18,17 @@ function Dropdown() {
   let menu;
   if (showMenu) {
     menu = (
-      <nav className="md:hidden  duration-500 absolute top-5 left-0 right-0 text-black   h-auto  w-[100%] mx-auto  bg-white text-center pt-6 z-20  font-['kanit'] text-[24px] rounded-b-3xl  ">
+      <nav className="md:hidden  duration-500 absolute top-7 left-0 right-0 text-black   h-auto  w-[100%] mx-auto  bg-white text-center pt-6 z-20  font-['kanit'] text-[24px] rounded-b-3xl  ">
         <ul>{listItems}</ul>
 
         <button className="px-[20px] py-[8px] mt-2 rounded-3xl bg-black text-white    flex mx-auto gap-1 ">
-          contact <img src="xx" alt="xx" />
+          contact{" "}
+          <FontAwesomeIcon icon={faMessage} className="w-4 h-4 mt-2 ml-1" />
         </button>
 
         <ul className="flex w-full h-full bg-red-950 text-white py-8 rounded-b-3xl mt-4">
           <li className="w-1/2 text-[18px] space-y-[2px] ">
-            <img className="w-8 mx-auto" src={telegram} alt="" />
+            <FontAwesomeIcon icon={faTelegram} className="w-12 h-12" />
             <p>
               <a href="">Email</a>
             </p>
@@ -33,12 +37,12 @@ function Dropdown() {
             </p>
           </li>
           <li className="w-1/2 text-[18px] space-y-[2px]">
-            <img className="w-8 mx-auto" src={telegram} alt="" />
+            <FontAwesomeIcon icon={faInstagram} className="w-12 h-12" />
             <p>
-              <a href="">Email</a>
+              <a href="">Instagram</a>
             </p>
             <p>
-              <a href="telegram.com">telegram@gmail.com</a>
+              <a href="telegram.com">instaName</a>
             </p>
           </li>
         </ul>

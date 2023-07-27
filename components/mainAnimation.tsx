@@ -1,7 +1,9 @@
 function mainAnimation() {
   return (
-    <div className="pb-12">
-      <img className="w-12 h-16 bg-red-400 mx-auto" src="xx" alt="xx" />
+    <div className="pb-12  ">
+      <div className="w-[60px] h-[120px] bg-transparent border-[7px] rounded-[60px] relative mx-auto">
+        <div className="absolute w-[42px] h-[42px] rounded-[50%] bg-red-400 inset-0 m-auto animate-[circle_2s_ease-in-out_infinite_alternate]"></div>
+      </div>
     </div>
   );
 }
