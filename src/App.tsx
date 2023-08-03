@@ -8,7 +8,7 @@ import Footer from "../components/footer";
 
 function App() {
   return (
-    <div className="pt-4  ">
+    <div className="pt-4   font-[poppins] ">
       <Header />
       <LetsBuild />
       <MainAnimation />
