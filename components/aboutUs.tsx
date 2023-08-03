@@ -1,13 +1,13 @@
 function RenderingEmp() {
   const employees = [
     {
-      name: "John Doe",
+      name: "Jane Doe",
       position: "Developer",
       img: "https://assets-global.website-files.com/6268ee4c723aa407295be451/62fe50556a27a21aa4f04f16_facetune-linkedin-img1.jpg",
       link: "linkedin.com",
     },
     {
-      name: "Jane Doe",
+      name: "John Doe",
       position: "Web designer and developer",
       img: "https://images.pexels.com/photos/5308640/pexels-photo-5308640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       link: "linkedin.com",
@@ -28,15 +28,23 @@ function RenderingEmp() {
 
   const listItems = employees.map((x) => {
     return (
-      <div className="bg-pink-400 py-12 text-white space-y-2 rounded-3xl border border-t-4 border-b-0 border-pink-600 mb-4">
+      <div className="bg-pink-400 py-12 md:py-4 text-white space-y-2 rounded-3xl border border-t-4  border-b-0 border-pink-600 mb-4 md:text-left md:flex md:px-6 md:space-x-6">
         <img
-          className="bg-blue-400 w-20 h-20 rounded-full mx-auto"
+          className="bg-blue-400 w-20 h-20 rounded-full mx-auto md:mx-0"
           src={x.img}
           alt=""
         />
-        <p className="font-bold text-[1.3em]">{x.name}</p>
-        <p>{x.position}</p>
-        <a href={x.link}>LN</a>
+        <div>
+          <p className="font-bold text-[1.2em]">{x.name}</p>
+          <p className="text-[0.9em]">{x.position}</p>
+        </div>
+
+        <a
+          className="font-bold text-[1.1em] md:text-[1.6em]  md:absolute md:right-16 md:pt-[6px]  "
+          href={x.link}
+        >
+          in
+        </a>
       </div>
     );
   });
@@ -45,21 +53,28 @@ function RenderingEmp() {
 
 function aboutUs() {
   return (
-    <div className="h-full p-8 space-y-8 w-full  rounded-t-[60px]  bg-pink-200    relative  ">
-      <h1 className="text-[1.6em] py-4 font-bold w-[200px] sm:w-full mx-auto ">
-        A little bit about us
-      </h1>
-      <p className="text-left  ">
-        Vinicius, the lead web designer and developer of Cinza, has been working
-        at Razorfrog Web Design since 2016, and has almost a decade of
-        experience in the field. He decided to create Cinza in 2020, when he
-        felt that he was ready to put together a portfolio of some of his
-        favorite independent work, and start some new projects with the help of
-        his newly assembled team. We are all proud members of the LGBTQ+
-        community, and we hope to help make the internet a better place for
-        everybody. We are not only proud of the technical aspect of our work,
-        but also the people involved, and their individual missions.
-      </p>
+    <div className="h-full p-8 pt-20 space-y-8 w-full  rounded-t-[60px]  bg-pink-200    relative xl:grid xl:grid-cols-2 xl:pb-16">
+      <div className="xl:px-12">
+        <h1 className="text-[1.6em] py-4 font-bold  sm:w-full  text-left text-[#DD3C5F] xl:text-[1.8em] xl:py-12">
+          A little bit about us
+        </h1>
+        <p className="text-left  ">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets.
+        </p>
+        <p className="text-left  ">
+          {" "}
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
 
       <RenderingEmp />
     </div>

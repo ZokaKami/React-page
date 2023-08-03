@@ -11,24 +11,22 @@ const listItems = navigation.map((item) => (
 ));
 function Header() {
   return (
-    <>
-      <div className="text-white hover:text-black bg-gray-600  hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full   bg-opacity-75  font-['kanit']  font-light  ">
-        <h1 className=" z-40   text-[30px] md:text-[28px] font-semibold pl-2  tracking-wider">
-          CINZA
-        </h1>
+    <div className=" text-white hover:text-black bg-gray-600  hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full   bg-opacity-75  font-['kanit']  font-light  ">
+      <h1 className=" z-40   text-[30px] md:text-[28px] font-semibold pl-2  tracking-wider">
+        CINZA
+      </h1>
 
-        <ul className="hidden md:flex    items-center gap-7 text-[14px] ">
-          {listItems}
-        </ul>
+      <ul className="hidden md:flex    items-center gap-7 text-[14px] ">
+        {listItems}
+      </ul>
 
-        <button className="px-[20px] py-[8px]  rounded-3xl bg-black  text-[16px] text-white  gap-1 hidden md:flex  ">
-          contact <img src="xx" alt="xx" />
-        </button>
-        <div className="md:hidden">
-          <Dropdown />
-        </div>
+      <button className="px-[20px] py-[8px]  rounded-3xl bg-black  text-[16px] text-white  gap-1 hidden md:flex  ">
+        contact <img src="xx" alt="xx" />
+      </button>
+      <div className="md:hidden">
+        <Dropdown />
       </div>
-    </>
+    </div>
   );
 }
 
