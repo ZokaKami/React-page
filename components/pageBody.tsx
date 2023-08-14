@@ -8,8 +8,8 @@ import Rocket from "./images/rocket.png";
 
 function pageBody() {
   return (
-    <div className="w-full bg-red-100 rounded-t-[48px] text-center text-[1em]    ">
-      <div className="px-6 space-y-8 md:px-12 ">
+    <div className="w-full   bg-red-100 rounded-t-[48px] text-center text-[1em]    ">
+      <div className="px-6 space-y-8 md:px-12 xl:w-[80%] xl:mx-auto ">
         <div className="h-full pb-16 pt-20 max-w-[420px] mx-auto  ">
           <h1 className="text-[1.6em] py-4 font-bold text-[#DD3C5F]">
             How can we help you?
@@ -65,6 +65,7 @@ function pageBody() {
         <ShowcaseList />
         <ShowcaseCards />
       </div>
+
       <AboutUs />
     </div>
   );

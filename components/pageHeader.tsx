@@ -1,6 +1,7 @@
 import Dropdown from "./dropdownMenu";
-
+import { useState } from "react";
 const navigation = ["our process", "our work", "about us"];
+
 const listItems = navigation.map((item) => (
   <li
     key="{item}{item}"
@@ -10,19 +11,35 @@ const listItems = navigation.map((item) => (
   </li>
 ));
 function Header() {
+  const [show, setShow] = useState(false);
+  function HandleClick() {
+    setShow((show) => !show);
+  }
+  let ToggleClassCheck = show
+    ? "bg-white opacity-100 text-black bg-opacity-100"
+    : "bg-gray-600 text-white";
+
   return (
-    <div className=" text-white hover:text-black bg-gray-600  hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full   bg-opacity-75  font-['kanit']  font-light  ">
+    <div
+      onClick={HandleClick}
+      className={`${ToggleClassCheck}   hover:text-black    hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full   bg-opacity-75  font-["kanit"]  font-light   `}
+    >
       <h1 className=" z-40   text-[30px] md:text-[28px] font-semibold pl-2  tracking-wider">
-        CINZA
+        DINZA
       </h1>
 
       <ul className="hidden md:flex    items-center gap-7 text-[14px] ">
         {listItems}
       </ul>
 
-      <button className="px-[20px] py-[8px]  rounded-3xl bg-black  text-[16px] text-white  gap-1 hidden md:flex  ">
+      <button
+        className={
+          " px-[20px] py-[8px]  rounded-3xl bg-black  text-[16px] text-white  gap-1 hidden md:flex  "
+        }
+      >
         contact <img src="xx" alt="xx" />
       </button>
+
       <div className="md:hidden">
         <Dropdown />
       </div>

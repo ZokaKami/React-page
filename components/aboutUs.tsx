@@ -53,7 +53,7 @@ function RenderingEmp() {
 
 function aboutUs() {
   return (
-    <div className="h-full p-8 pt-20 space-y-8 w-full  rounded-t-[60px]  bg-pink-200    relative xl:grid xl:grid-cols-2 xl:pb-16">
+    <div className="h-full p-8 pt-20 space-y-8 w-full    rounded-t-[60px]  bg-pink-200    relative xl:grid xl:grid-cols-2 xl:pb-16">
       <div className="xl:px-12">
         <h1 className="text-[1.6em] py-4 font-bold  sm:w-full  text-left text-[#DD3C5F] xl:text-[1.8em] xl:py-12">
           A little bit about us

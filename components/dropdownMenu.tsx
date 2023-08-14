@@ -51,14 +51,14 @@ function Dropdown() {
   }
   return (
     <>
-      <span>
+      <span onClick={() => setShowMenu(!showMenu)}>
         {" "}
         <img
           src={hamburgerWhite}
           onMouseOver={(e) => (e.currentTarget.src = hamburgerBlack)}
+          onClick={(e) => (e.currentTarget.src = hamburgerBlack)}
           onMouseOut={(e) => (e.currentTarget.src = hamburgerWhite)}
           alt="x"
-          onClick={() => setShowMenu(!showMenu)}
           className="relative w-8 h-6 mt-2 z-40 text-black md:hidden"
         />
       </span>
