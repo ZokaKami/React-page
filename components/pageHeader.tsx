@@ -16,13 +16,13 @@ function Header() {
     setShow((show) => !show);
   }
   let ToggleClassCheck = show
-    ? "bg-white opacity-100 text-black bg-opacity-100"
-    : "bg-gray-600 text-white";
+    ? "bg-white   text-black bg-opacity-100"
+    : "bg-gray-600 text-white bg-opacity-75";
 
   return (
     <div
       onClick={HandleClick}
-      className={`${ToggleClassCheck}   hover:text-black    hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full   bg-opacity-75  font-["kanit"]  font-light   `}
+      className={`${ToggleClassCheck}   hover:text-black    hover:bg-white relative  h-fill py-2 justify-between   px-4  flex   duration-500 w-[90%] mx-auto rounded-full      font-["kanit"]  font-light   `}
     >
       <h1 className=" z-40   text-[30px] md:text-[28px] font-semibold pl-2  tracking-wider">
         DINZA

@@ -19,7 +19,7 @@ function pageBody() {
             We’ll strive to make this process as easy as possible for you.
           </p>
         </div>
-        <div className="md:grid md:grid-cols-3 gap-6">
+        <div className="md:grid md:grid-cols-3 gap-6 space-y-6 md:space-y-0 ">
           <div className="   mx-auto bg-red-200 rounded-3xl pt-10  ">
             <h1 className="text-[1.3em] py-4 font-bold text-[#DD3C5F]">
               Planning
