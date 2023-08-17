@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import hamburgerWhite from "./images/hamburgerWhite.png";
 import hamburgerBlack from "./images/hamburgerBlack.png";
@@ -15,10 +15,31 @@ function Dropdown() {
     </li>
   ));
 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > prevScrollPos) {
+      setShowMenu(false);
+    } else if (prevScrollPos > currentScrollPos) {
+      setShowMenu(false);
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   let menu;
   if (showMenu) {
     menu = (
-      <nav className="md:hidden  duration-500 absolute top-7 left-0 right-0 text-black   h-auto  w-[100%] mx-auto  bg-white text-center pt-6 z-20  font-['kanit'] text-[24px] rounded-b-3xl  ">
+      <nav
+        className={`md:hidden  duration-300 absolute top-7 left-0 right-0 text-black   h-auto  w-[100%] mx-auto  bg-white text-center pt-6 z-20  font-['kanit'] text-[24px] rounded-b-3xl  `}
+      >
         <ul>{listItems}</ul>
 
         <button className="px-[20px] py-[8px] mt-2 rounded-3xl bg-black text-white    flex mx-auto gap-1 ">
